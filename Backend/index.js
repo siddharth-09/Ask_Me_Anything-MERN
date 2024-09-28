@@ -12,9 +12,17 @@ const port = process.env.port || 3800;
 // Initialize the Express app
 const app = express();
 
+const corsOptions = {
+    origin: '*',  // Your frontend URL
+    methods: ['GET', 'POST', 'OPTIONS'],  // Include OPTIONS for preflight requests
+    allowedHeaders: ['Content-Type', 'Authorization'],  // Include necessary headers
+    credentials: true
+};
+
+
 // Middleware
 app.use(express.json());  // Parse JSON request bodies
-app.use(cors());          // Enable CORS for all routes
+app.use(cors(corsOptions));          // Enable CORS for all routes
 
 // Initialize Google Generative AI with API key from environment variables
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
