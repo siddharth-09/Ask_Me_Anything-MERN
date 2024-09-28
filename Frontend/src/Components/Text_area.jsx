@@ -32,7 +32,7 @@ export function Text_area() {
             className="flex items-center justify-center rounded-full h-10 px-6 bg-[#0d80f2] text-white text-sm font-bold leading-normal"
             onClick={async () => {
               await axios
-                .post("https://backend-theta-ten-18.vercel.app/gpt", { question: text })
+                .post("https://backend-roan-nine-59.vercel.app/gpt", { question: text })
                 .then((res) => {
                   setans(res.data.ans);
                 });
