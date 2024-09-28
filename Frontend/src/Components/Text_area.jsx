@@ -15,7 +15,7 @@ export function Text_area() {
           Ask a question
         </h1>
         <p className="text-white text-base font-normal leading-normal text-center pb-6">
-          Your question will be answered by a community of people with deep knowledge and expertise.
+          Your question with deep knowledge and expertise.
         </p>
 
         <div className="w-full">
